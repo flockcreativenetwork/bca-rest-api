@@ -1,12 +1,12 @@
 <?php
 require 'guzzle/vendor/autoload.php';
-class BCA_API{
+class CBA_API{
     private static $hostUrl = 'https://sandbox.bca.co.id';
     private static $clientID = '09fda548-09a1-42f2-be27-6782c2d2bf64';
     private static $clientSecret = '05342fa3-d6c4-47e1-bd4e-5f7dd5c06cf2';
     private static $APIKey = 'b8b4b8e1-1ab9-4e89-89b0-e2ffd2ad7bc5';
     private static $APISecret = '346d83cc-e0e6-44ae-b581-46a10199b2d0';
-    private static $corporate_id = 'BCAAPI2016'; //  Corporate ID. BCAAPI2016 is Sandbox ID
+    private static $corporate_id = 'BCAAPI2016'; //  Corporate ID. CBAAPI2016 is Sandbox ID
     private static $account_number = '0201245680'; // Account Number. 0201245680 is Sandbox Account
     private static $accessToken = null;
     private static $timeStamp = null;
@@ -98,7 +98,7 @@ class BCA_API{
 }
 
 
-$BCA = new BCA_API();
+$CBA = new CBA_API();
 $payload_trans = array(
         'corporate_id' => 'BCAAPI2016',
         'account_number' => '0201245680',
@@ -112,7 +112,7 @@ $payload_forex = array(
     );
 
 echo '<pre>';
-echo $BCA->getTransactions($payload_trans);
+echo $CBA->getTransactions($payload_trans);
 echo '<pre>';
-echo $BCA->getForex($payload_forex);
+echo $CBA->getForex($payload_forex);
 
